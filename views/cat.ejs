@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Cats! - <%= cat.name %></title>
+<style>
+section { border: 1px solid grey; max-width: 50%; text-align: center; margin: 10px auto;}
+</style>
+  </head>
+  <body>
+    <h1><%= cat.name %></h1>
+    <img src="<%= cat.image %>" alt="<%= cat.name %>" />
+    <br />
+    <a href="/cats/<%= cat.id %>/edit" title="Edit <%= cat.name %>">Edit</a> | <a href="/cats/<%= cat.id %>/delete" title="Delete <%= cat.name %>">Delete</a>
+  </body>
+</html>

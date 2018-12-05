@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Cats!</title>
+<style>
+section { border: 1px solid grey; max-width: 50%; text-align: center; margin: 10px auto;}
+img { max-height: 300px; }
+</style>
+  </head>
+  <body>
+    <h1>Cats!</h1>
+    <form method="GET" action="/cats/new">
+      <button type="submit">Add Cat</button>
+    </form>
+    <hr />
+    <% cats.forEach(cat => { %>
+      <section>
+        <h2><strong><%= cat.name %></strong></h2>
+        <a href="/cats/<%= cat.id %>" title="<%= cat.name %>">
+        <img src="<%= cat.image %>" alt="<%= cat.name %>" />
+        </a>
+      </section>
+    <% }) %>
+  </body>
+</html>
